@@ -1,5 +1,27 @@
+const casas = [{id:1 , nombre : "Los Robles",precio : 15000,capacidad : 6, reservada : false },
+         
+               { id:2, nombre : "Los Espinillos",precio : 14000,capacidad : 5,reservada : false },
+               
+               { id:3, nombre : "Los Molles",precio : 12000,capacidad : 4,reservada : false }]
+
+
+
+
+let reserva = []
+
+
+
+
+
+
+
+
+
+
 let nombreInquilino = prompt("nombre completo");
-console.log("Hola " ,nombreInquilino)
+alert(
+    `Hola ${nombreInquilino} bienvenido a nuestro complejo.`
+  );
 
 let cantDiasAlquier = parseInt(prompt("cuantos dias queres alquilar?"));
 console.log("Dias solicitados: " ,cantDiasAlquier)
@@ -10,6 +32,7 @@ console.log("cantidad de personas : " ,cantPersonas)
 
 if(cantPersonas<=4) {
     console.log("Tengo disponible la casa Los Molles")
+    casaElegida = 3
     precioPorDia = 10000
     
 }else if (cantPersonas==5){
@@ -45,7 +68,6 @@ else{
 }
 
 
-
 let precioTotal = cantDiasAlquier*precioPorDia
 console.log("El costo total de tu estadia  es de ",precioTotal)
 
@@ -64,6 +86,9 @@ function precioRecargo(){
     return precioRecargoT;
 }
 
+
+reserva.push({casaElegida,cantDiasAlquier,precioTotal})
+console.log(reserva);
 
 
 
